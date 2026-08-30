@@ -1353,6 +1353,8 @@ class HiFiClient {
             }
 
             try {
+                console.log('[HiFi request]', final);
+                
                 res = await fetch(final, {
                     headers,
                     signal,
