@@ -1372,9 +1372,10 @@ class HiFiClient {
 
         if (!res.ok) {
             const body = await res.text();
-            throw new ResponseError(
+           throw new ResponseError(
                 res.status,
-                `${res.statusText}${body ? `: ${body}` : ''}`
+                `${res.statusText} [${final}]${body ? `: ${body}` : ''}`
+                );
             );
         }
 
