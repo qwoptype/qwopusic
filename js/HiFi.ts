@@ -2300,7 +2300,7 @@ class HiFiClient {
                 q,
                 'https://openapi.tidal.com/v2/searchResults',
                 {
-                    query: q,
+                    'filter[query]': q,
                     limit,
                     offset,
                     include: includeQ,
