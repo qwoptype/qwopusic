@@ -2296,10 +2296,11 @@ class HiFiClient {
         const includeP = 'playlists,playlists.coverArt';
 
         const mapping: Array<[string | undefined, string, Params]> = [
-            [
+           [
                 q,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(q || '')}`,
+                'https://openapi.tidal.com/v2/searchResults',
                 {
+                    query: q,
                     limit,
                     offset,
                     include: includeQ,
@@ -2308,28 +2309,58 @@ class HiFiClient {
             ],
             [
                 s,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(s || '')}`,
-                { limit, offset, include: includeS, countryCode: this.#countryCode },
+                'https://openapi.tidal.com/v2/searchResults',
+                {
+                    query: s,
+                    limit,
+                    offset,
+                    include: includeS,
+                    countryCode: this.#countryCode,
+                },
             ],
             [
                 a,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(a || '')}`,
-                { limit, offset, include: includeA, countryCode: this.#countryCode },
+                'https://openapi.tidal.com/v2/searchResults',
+                {
+                    query: a,
+                    limit,
+                    offset,
+                    include: includeA,
+                    countryCode: this.#countryCode,
+                },
             ],
             [
                 al,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(al || '')}`,
-                { limit, offset, include: includeAl, countryCode: this.#countryCode },
+                'https://openapi.tidal.com/v2/searchResults',
+                {
+                    query: al,
+                    limit,
+                    offset,
+                    include: includeAl,
+                    countryCode: this.#countryCode,
+                },
             ],
             [
                 v,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(v || '')}`,
-                { limit, offset, include: includeV, countryCode: this.#countryCode },
+                'https://openapi.tidal.com/v2/searchResults',
+                {
+                    query: v,
+                    limit,
+                    offset,
+                    include: includeV,
+                    countryCode: this.#countryCode,
+                },
             ],
             [
                 p,
-                `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(p || '')}`,
-                { limit, offset, include: includeP, countryCode: this.#countryCode },
+                'https://openapi.tidal.com/v2/searchResults',
+                {
+                    query: p,
+                    limit,
+                    offset,
+                    include: includeP,
+                    countryCode: this.#countryCode,
+                },
             ],
         ];
 
