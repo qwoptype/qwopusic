@@ -3532,6 +3532,9 @@ export class LosslessAPI {
                 throw error;
             }
             console.error('Download failed:', error);
+            console.error('Original download error:', error);
+            console.error('Original error message:', error?.message);
+            console.error('Original error stack:', error?.stack);
             if (error instanceof FfmpegError || error.code === 'MP3_ENCODING_FAILED') {
                 throw error;
             }
