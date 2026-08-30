@@ -1375,7 +1375,6 @@ class HiFiClient {
            throw new ResponseError(
                 res.status,
                 `${res.statusText} [${final}]${body ? `: ${body}` : ''}`
-                );
             );
         }
 
