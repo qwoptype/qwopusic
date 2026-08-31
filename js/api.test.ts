@@ -329,7 +329,13 @@ suite('Track Downloads', async () => {
         // eslint-disable-next-line @typescript-eslint/unbound-method
         vi.mocked(losslessContainerSettings.getContainer).mockReturnValue(container);
 
-        const blob = await downloadTrack(trackId, quality);
+        let blob;
+try {
+    blob = await downloadTrack(trackId, quality);
+} catch (error) {
+    console.error(`DOWNLOAD FAILED: ${display_quality}`, error);
+    throw error;
+}
         expect(ffmpeg).toHaveBeenCalledTimes(ffmpegCalls);
         const file = await FileRef.fromBlob(blob);
         const stream = file.file().stream();
