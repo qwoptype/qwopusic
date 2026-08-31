@@ -3544,7 +3544,7 @@ export class LosslessAPI {
             if (error.message === RATE_LIMIT_ERROR_MESSAGE) {
                 throw error;
             }
-            throw new Error('Download failed. The stream may require a proxy.');
+            throw error;
         }
     }
 
