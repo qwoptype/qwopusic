@@ -2719,11 +2719,13 @@ export class LosslessAPI {
             const envelope = await this.fetchUnifiedPlaybackEnvelope(track, canonicalQuality, { ...options, intent });
             if (!envelope) return null;
 
-            console.log('Unified Playback envelope:', envelope);
+            console.log('=== UNIFIED PLAYBACK ENVELOPE ===');
+            console.log(JSON.stringify(envelope, null, 2));
 
             const resource = this.getUnifiedPlaybackResource(envelope);
 
-            console.log('Unified Playback selected resource:', resource);
+            console.log('=== UNIFIED PLAYBACK RESOURCE ===');
+            console.log(JSON.stringify(resource, null, 2));
 
             if (!resource) {
                 throw new Error('Unified Playback response contained no supported playback resource');
