@@ -3176,6 +3176,15 @@ export class LosslessAPI {
                             albumPeakAmplitude: 1,
                         },
                     };
+                    console.error('[download-debug] Audio source resolution failed', {
+                        id,
+                        quality: cleanQuality,
+                        isrc: track?.isrc,
+                        title: track?.title,
+                        artist: track?.artist,
+                        unifiedResult,
+                        deezerResult,
+                    });
                 } else {
                     notifyAudioSourceMissing();
                     throw new Error(
