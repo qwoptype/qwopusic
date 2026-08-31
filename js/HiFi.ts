@@ -2298,8 +2298,9 @@ class HiFiClient {
        const mapping: Array<[string | undefined, string, Params]> = [
     [
         q,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(q || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: q,
             limit,
             offset,
             include: includeQ,
@@ -2308,8 +2309,9 @@ class HiFiClient {
     ],
     [
         s,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(s || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: s,
             limit,
             offset,
             include: includeS,
@@ -2318,8 +2320,9 @@ class HiFiClient {
     ],
     [
         a,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(a || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: a,
             limit,
             offset,
             include: includeA,
@@ -2328,8 +2331,9 @@ class HiFiClient {
     ],
     [
         al,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(al || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: al,
             limit,
             offset,
             include: includeAl,
@@ -2338,8 +2342,9 @@ class HiFiClient {
     ],
     [
         v,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(v || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: v,
             limit,
             offset,
             include: includeV,
@@ -2348,8 +2353,9 @@ class HiFiClient {
     ],
     [
         p,
-        `https://openapi.tidal.com/v2/searchResults/${encodeURIComponent(p || '')}`,
+        'https://openapi.tidal.com/v2/searchResults',
         {
+            query: p,
             limit,
             offset,
             include: includeP,
