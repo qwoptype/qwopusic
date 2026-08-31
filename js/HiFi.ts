@@ -2311,7 +2311,7 @@ class HiFiClient {
     s,
     'https://openapi.tidal.com/v2/searchResults',
     {
-        query: s,
+        'filter[query]': s,
         limit,
         offset,
         include: includeS,
@@ -2322,7 +2322,7 @@ class HiFiClient {
     a,
     'https://openapi.tidal.com/v2/searchResults',
     {
-        query: a,
+        'filter[query]': a,
         limit,
         offset,
         include: includeA,
@@ -2333,7 +2333,7 @@ class HiFiClient {
     al,
     'https://openapi.tidal.com/v2/searchResults',
     {
-        query: al,
+        'filter[query]': al,
         limit,
         offset,
         include: includeAl,
@@ -2344,7 +2344,7 @@ class HiFiClient {
     v,
     'https://openapi.tidal.com/v2/searchResults',
     {
-        query: v,
+        'filter[query]': v,
         limit,
         offset,
         include: includeV,
@@ -2355,7 +2355,7 @@ class HiFiClient {
     p,
     'https://openapi.tidal.com/v2/searchResults',
     {
-        query: p,
+        'filter[query]': p,
         limit,
         offset,
         include: includeP,
