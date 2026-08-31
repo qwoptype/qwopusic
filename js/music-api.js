@@ -219,6 +219,16 @@ export class MusicAPI {
         return api.getStreamUrl(cleanId, quality);
     }
 
+    async canPlayAmazonMusicStream(options = {}) {
+        const api = this.getAPI();
+        
+        if (typeof api.canPlayAmazonMusicStream === 'function') {
+            return api.canPlayAmazonMusicStream(options);
+        }
+
+        return false;
+    }
+
     usesSingleUsePlaybackUrls() {
         return this.getAPI().usesSingleUsePlaybackUrls?.() === true;
     }
