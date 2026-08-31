@@ -2594,8 +2594,14 @@ export class LosslessAPI {
                     return null;
                 }
                 if (response.status === 404 || response.status === 502) {
-                    console.warn('Unified Playback could not resolve the track:', envelope?.sources || envelope);
-                    return null;
+                console.error('Unified Playback request failed:', {
+                    status: response.status,
+                       url: `${apiBaseUrl}/api/v2/track/?${params.toString()}`,
+                    envelope,
+                    track,
+                    quality,
+                  });
+                return null;
                 }
                 if (response.status === 401 || response.status === 403 || response.status === 428) {
                     throw new Error(`Unified Playback API authorization failed: ${response.status}`);
